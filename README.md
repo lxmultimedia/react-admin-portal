@@ -1,5 +1,5 @@
 # React Admin Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Demo: http://admin.lxbase.ml/
 
 Based on https://marmelab.com/react-admin/

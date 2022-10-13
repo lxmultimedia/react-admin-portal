@@ -1,4 +1,5 @@
 import {
+  AutocompleteInput,
   Edit,
   ReferenceInput,
   SimpleForm,
@@ -15,7 +16,9 @@ export const PostEdit = () => (
   <Edit title={<PostTitle />}>
     <SimpleForm>
       <TextInput disabled source="id" />
-      <ReferenceInput source="userId" reference="users" />
+      <ReferenceInput source="userId" reference="users">
+        <AutocompleteInput optionText="name" fullWidth />
+      </ReferenceInput>
       <TextInput source="title" fullWidth />
       <TextInput multiline source="body" fullWidth />
     </SimpleForm>

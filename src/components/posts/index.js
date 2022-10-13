@@ -10,12 +10,10 @@ import {
 export const PostList = () => (
   <List>
     <Datagrid>
+      <ReferenceField source="userId" reference="users" link>
+        <TextField source="name" />
+      </ReferenceField>
       <TextField source="id" />
-      <ReferenceField
-        source="userId"
-        reference="users"
-        recordRepresentation="name"
-      />
       <TextField source="title" />
       <EditButton />
     </Datagrid>

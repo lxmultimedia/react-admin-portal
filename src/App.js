@@ -6,6 +6,10 @@ import jsonServerProvider from "ra-data-json-server";
 import { PostEdit } from "./components/posts/edit";
 import { PostCreate } from "./components/posts/create";
 import { defaultTheme } from "react-admin";
+import PostIcon from "@mui/icons-material/Book";
+import UserIcon from "@mui/icons-material/Group";
+import Dashboard from "./components/dashboard";
+import authProvider from "./components/login/authProvider";
 
 const theme = {
   ...defaultTheme,
@@ -17,13 +21,24 @@ const theme = {
 const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
 
 const App = () => (
-  <Admin dataProvider={dataProvider} theme={theme}>
-    <Resource name="Users" recordRepresentation="name" list={UserList} />
+  <Admin
+    dashboard={Dashboard}
+    authProvider={authProvider}
+    dataProvider={dataProvider}
+    theme={theme}
+  >
+    <Resource
+      name="Users"
+      recordRepresentation="name"
+      list={UserList}
+      icon={UserIcon}
+    />
     <Resource
       name="posts"
       list={PostList}
       edit={PostEdit}
       create={PostCreate}
+      icon={PostIcon}
     />
   </Admin>
 );

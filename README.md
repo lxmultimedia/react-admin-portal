@@ -1,6 +1,6 @@
 # React Admin Portal
 
-Demo: http://admin.lxbase.ml/
+Demo: https://admin.lxmedia.tk/
 
 Login: demo/demo
 

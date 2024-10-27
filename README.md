@@ -1,6 +1,6 @@
 # React Admin Portal
 
-Demo: https://admin.lxmedia.tk/
+Demo: https://admin.ozona.ch
 
 Login: demo/demo
 
